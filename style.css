@@ -1,0 +1,30 @@
+/* Ayaka portfolio theme
+
+Copyright (c) 2023 Ayaka
+
+
+*/
+
+.card {
+  border: none;
+  border-radius: 0;
+  transition: box-shadow 0.5s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-text {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.btn-group {
+  margin-top: 10px;
+}
