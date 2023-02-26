@@ -2,29 +2,282 @@
 
 Copyright (c) 2023 Ayaka
 
-
 */
 
-.card {
-  border: none;
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@400;700;800&display=swap');
+
+/* general */
+:root {
+    --primary: #b1a59e;
+    --accent: #8a7a6d;
+    --body: #ebe6e3;
+    --body2: #f4eeeb;
+    --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2); 
+}
+
+
+body {
+  background-color: var(--body2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
+
+* {
+  font-family: 'Martel Sans', sans-serif;
+  line-height: 1.7;
+  
+}
+
+
+
+/* navbar */
+.navbar {
+  background-color: transparent;
+  padding: 0;
+  border: 0;
   border-radius: 0;
-  transition: box-shadow 0.5s;
-}
-
-.card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-top {
-  object-fit: cover;
-  height: 200px;
-}
-
-.card-text {
-  font-weight: bold;
   margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
 }
 
-.btn-group {
-  margin-top: 10px;
+.navbar-brand {
+  max-width: 300px;
+  
+}
+
+.navbar .nav-item .nav-link  {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: large;
+}
+
+.nav-item a {
+    padding-bottom:15px;
+    border-bottom: 2px solid transparent;
+    display: block;
+} 
+
+.nav-item a:hover {
+    border-bottom: 4px solid #2b2b2b;
+    padding-bottom: 10px;
+    transition: 0.5s;
+}
+
+.nav-item a:active {
+    color: var(--accent);
+}
+
+.button svg {
+  fill: var(--accent);
+}
+
+
+
+/* front-page */
+
+.profile-photo{
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.profile-photo img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 50%;
+    overflow: clip;
+}
+
+.custom-btn {
+  background-color: var(--accent);
+  display: inline-block;
+  border-radius: 2%;
+  padding: 10px 20px;
+  color: var(--body);
+  box-shadow: var(--box-shadow);
+  
+}
+
+.custom-btn:hover {
+  background-color: #6d645e;
+  color: var(--body);
+  transition: all 0.35s ease;
+  transform: translateY(2px);
+
+}
+
+/* skill-set */
+
+svg {
+  width: 114px;
+  height: 114px;
+  margin: 1em;
+}
+
+.bg {
+  fill: none;
+  stroke-width: 10px;
+  stroke: var(--accent);
+}
+
+[class^="meter-"] {
+  fill: none;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  
+}
+
+.meter-1 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 100;
+  stroke: #c46f6f;
+  animation: progress-1 3s ease-out;
+}
+.meter-2 {
+  stroke: #71b768;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 100;
+  animation: progress-2 2.8s ease-out;
+}
+.meter-3 {
+  stroke: #eac677;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 120;
+  animation: progress-3 2.5s ease-out;
+}
+.meter-4 {
+  stroke: #c46f6f;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 160;
+  animation: progress-4 2s ease-out;
+}
+.meter-5 {
+  stroke: #71b768;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 160;
+  animation: progress-5 1.8s ease-out;
+}
+
+.meter-6 {
+  stroke: #eac677;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 160;
+  animation: progress-6 1.5s ease-out;
+}
+
+.meter-7 {
+  stroke: #c46f6f;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 160;
+  animation: progress-7 1.2s ease-out;
+}
+
+.meter-8 {
+  stroke: #71b768;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 190;
+  animation: progress-8 1s ease-out;
+}
+
+.meter-9 {
+  stroke: #eac677;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 190;
+  animation: progress-9 0.8s ease-out;
+}
+
+@keyframes progress-1 {
+    from {
+        stroke-dashoffset: 360;
+    }
+    to {
+        stroke-dashoffset: 100;
+    }
+}
+
+@keyframes progress-2 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes progress-3 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 120;
+  }
+}
+
+@keyframes progress-4 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+@keyframes progress-5 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+@keyframes progress-6 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+@keyframes progress-7 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 160;
+  }
+}
+
+@keyframes progress-8 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 190;
+  }
+}
+
+@keyframes progress-9 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 190;
+  }
+}
+
+/* CV */
+
+.col-img {
+   background-image: url("");
+   background-position: center;
+   background-size: cover;
+   
 }
